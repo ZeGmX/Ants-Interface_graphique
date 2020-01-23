@@ -1,0 +1,217 @@
+options {
+  JAVA_UNICODE_ESCAPE = true;
+  OUTPUT_DIRECTORY = "parser";
+}
+
+PARSER_BEGIN(AntParser)
+  package ant.parser.parser;
+  public class AntParser {}
+PARSER_END(AntParser)
+
+
+// Whitespace and Comments
+<DEFAULT> SKIP : {
+" "
+| "\t"
+| <LineComment: ";" (~["\n","\r"])*>
+}
+
+   
+<DEFAULT> TOKEN : {
+<#Digit: ["0"-"9"]>
+| <Digits: (<Digit>)+>
+| <NegDigits: "-" <Digits> > 
+| <#IdentHead: ["a"-"z","A"-"Z","_"]>
+| <#IdentRest: <IdentHead> | <Digit> | "." | "#">
+| <Eol: (("\r")* "\n" ([" ","\t"])*)+>
+}
+
+   
+<DEFAULT> MORE : {
+<LitStrStart: "\""> : WITHIN_STRING
+}
+
+   
+<WITHIN_STRING> TOKEN : {
+<LitStr: "\""> : DEFAULT
+}
+
+   
+<WITHIN_STRING> MORE : {
+  <EscapeQuote: "\\\""> 
+| <EscapeBackslash: "\\\\"> 
+| <NormalStringContent: [" "-"~"]>
+}
+
+   
+// -------------------------------------------------------------
+
+TOKEN : 
+{
+  < TWOPOINTS: ":" >
+| < FOE: "Foe" >
+| < FOOD: "Food" >
+| < MOVE: "Move" >
+| < HOME: "Home" >
+| < HERE: "Here" >
+| < MARK: "Mark" >
+| < ROCK: "Rock" >
+| < TURN: "Turn" >
+| < DROP: "Drop" >
+| < FLIP: "Flip" >
+| < AHEAD: "Ahead" >
+| < SENSE: "Sense" >
+| < RIGHT: "Right" >
+| < LEFT: "Left" >
+| < GOTO: "Goto" >
+| < FRIEND: "Friend" >
+| < UNMARK: "Unmark" >
+| < PICKUP: "PickUp" >
+| < MARKER: "Marker" >
+| < FOEHOME: "FoeHome" >
+| < LEFTAHEAD: "LeftAhead" >
+| < RIGHTAHEAD: "RightAhead" >
+| < FOEMARKER: "FoeMarker" >
+| < FOEWITHFOOD: "FoeWithFood" >
+| < FRIENDWITHFOOD: "FriendWithFood" >
+}
+
+<DEFAULT> TOKEN : {
+  <PlainIdent: <IdentHead> (<IdentRest>)*>
+}
+
+   
+// Catch-all token.
+<*> TOKEN : {
+<Anything: ~[]>
+}
+
+   
+// (The rest of the tokens are defined as we use them in the grammar.)
+
+// -------------------------------------------------------------
+// Parser
+// -------------------------------------------------------------
+void Program() : {}
+{ ( Eol() )? ( Block() )* <EOF> }
+
+void Block() : {}
+{ Ident() ":" Eol() (Instr())* }
+
+void Instr() : {}
+{ ( Sense() 
+  | Mark()
+  | Unmark()
+  | PickUp()
+  | Drop()
+  | Goto()
+  | Turn()
+  | Move()
+  | Flip() ) }
+
+void Sense() : {}
+{ "Sense" Sensedir() Ident() Ident() Cond() Eol() }
+
+void Mark() : {}
+{ "Mark" LitInt() Eol() }
+
+void Unmark() : {}
+{ "Unmark" LitInt() Eol() }
+
+void PickUp() : {}
+{ "PickUp" Ident() Eol() }
+
+void Drop() : {}
+{ "Drop" Eol() }
+
+void Turn() : {}
+{ "Turn" Direction() Eol() }
+
+void Move() : {}
+{ "Move" Ident() Eol() }
+
+void Flip() : {}
+{ "Flip" LitInt() Ident() Ident() Eol() }
+
+void Goto() : {}
+{ "Goto" Ident() Eol() }
+
+void Direction() : {}
+{ ( Left()
+  | Right() ) }
+
+void Left() : {}
+{ "Left" }
+
+void Right() : {}
+{ "Right" }
+
+void Cond() : {}
+{ ( Friend()
+  | Foe()
+  | FriendWithFood() 
+  | FoeWithFood() 
+  | Food() 
+  | Rock() 
+  | Marker()
+  | FoeMarker()
+  | Home()
+  | FoeHome() ) }
+
+void Friend() : {}
+{ "Friend" }
+
+void Foe() : {}
+{ "Foe" }
+
+void FriendWithFood() : {}
+{ "FriendWithFood" }
+
+void FoeWithFood() : {}
+{ "FoeWithFood" }
+
+void Food() : {}
+{ "Food" }
+
+void Rock() : {}
+{ "Rock" }
+
+void Marker() : {}
+{ "Marker" LitInt() }
+
+void FoeMarker() : {}
+{ "FoeMarker" }
+
+void Home() : {}
+{ "Home" }
+
+void FoeHome() : {}
+{ "FoeHome" }
+
+void Sensedir() : {}
+{ ( Here()
+  | Ahead()
+  | LeftAhead() 
+  | RightAhead() ) }
+
+void Here() : {}
+{ "Here" }
+
+void Ahead() : {}
+{ "Ahead" }
+
+void LeftAhead() : {}
+{ "LeftAhead" }
+
+void RightAhead() : {}
+{ "RightAhead" }
+
+
+void Ident() : {}
+{ <PlainIdent> }
+
+void LitInt() : {}
+{ ( <Digits> | <NegDigits> ) }
+
+void Eol() : {}
+{ ( <Eol> )+ }
