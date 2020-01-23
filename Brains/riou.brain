@@ -1,0 +1,2269 @@
+kernel:
+  Goto fun_main
+fun_main:
+  Sense Here while_4 case_any_1 FriendWithFood
+case_missed_1FriendWithFood:
+  Goto case_any_1
+case_1FriendWithFood:
+  Goto while_4
+while_4:
+  Sense Here while_148 inner_4 Home
+inner_4:
+  Sense Here while_8 else_6 FoeHome
+if_6:
+  Goto while_8
+while_8:
+  Sense Here inner_8 while_4 FoeHome
+inner_8:
+  Sense Ahead and_11 else_10 Foe
+and_11:
+  Sense LeftAhead and_12 else_10 Foe
+and_12:
+  Sense RightAhead while_13 else_10 Foe
+if_10:
+  Goto while_13
+while_13:
+  Sense Here inner_13 while_8 FoeHome
+inner_13:
+  Move fail_15
+  Goto while_13
+fail_15:
+  Flip 2 rand_yes_17 rand_no_17
+rand_yes_17:
+  Flip 2 rand_yes_19 rand_no_19
+rand_yes_19:
+  Turn Left
+  Goto while_13
+rand_no_19:
+  Turn Left
+  Turn Left
+  Goto while_13
+end_of_rand_19:
+  Goto while_13
+rand_no_17:
+  Flip 2 rand_yes_21 rand_no_21
+rand_yes_21:
+  Turn Right
+  Goto while_13
+rand_no_21:
+  Turn Right
+  Turn Right
+  Goto while_13
+end_of_rand_21:
+  Goto while_13
+end_of_rand_17:
+  Goto while_13
+success_15:
+  Goto while_13
+done_13:
+  Goto while_8
+else_10:
+  Sense Here and_23 else_22 Food
+and_23:
+  Sense Here else_22 if_22 FriendWithFood
+if_22:
+  PickUp while_26
+  Goto while_26
+fail_25:
+  Goto while_26
+success_25:
+  Goto while_26
+while_26:
+  Sense Ahead inner_26 or_27 FoeHome
+or_27:
+  Sense Ahead inner_26 or_28 Friend
+or_28:
+  Sense Ahead inner_26 done_26 Foe
+inner_26:
+  Turn Right
+  Goto while_26
+done_26:
+  Move success_29
+  Drop
+  Goto while_30
+fail_29:
+  Drop
+  Goto while_30
+success_29:
+  Drop
+  Goto while_30
+while_30:
+  Sense Ahead or_31 inner_30 FoeHome
+or_31:
+  Sense Ahead inner_30 or_32 Friend
+or_32:
+  Sense Ahead inner_30 done_30 Foe
+inner_30:
+  Turn Right
+  Goto while_30
+done_30:
+  Move while_8
+  Goto while_8
+fail_33:
+  Goto while_8
+success_33:
+  Goto while_8
+else_22:
+  Turn Right
+  Goto while_8
+endif_22:
+  Goto while_8
+endif_10:
+  Goto while_8
+done_8:
+  Goto while_4
+else_6:
+  Sense LeftAhead and_36 else_35 Foe
+and_36:
+  Sense RightAhead if_35 else_35 Foe
+if_35:
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto while_4
+else_35:
+  Sense Here case_38FriendWithFood case_any_38 FriendWithFood
+case_missed_38FriendWithFood:
+  Move fail_141
+  Goto while_4
+case_38FriendWithFood:
+  Sense Here if_41 else_41 Marker 0
+if_41:
+  Sense Here if_43 else_43 Marker 1
+if_43:
+  Sense Here while_45 while_55 Marker 2
+if_44:
+  Goto while_45
+while_45:
+  Sense Ahead and_46 inner_45 Marker 1
+and_46:
+  Sense Ahead inner_45 done_45 Marker 2
+inner_45:
+  Turn Right
+  Goto while_45
+done_45:
+  Move fail_48
+  Goto while_4
+fail_48:
+  Flip 2 rand_yes_50 rand_no_50
+rand_yes_50:
+  Flip 2 rand_yes_52 rand_no_52
+rand_yes_52:
+  Turn Left
+  Goto while_4
+rand_no_52:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_52:
+  Goto while_4
+rand_no_50:
+  Flip 2 rand_yes_54 rand_no_54
+rand_yes_54:
+  Turn Right
+  Goto while_4
+rand_no_54:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_54:
+  Goto while_4
+end_of_rand_50:
+  Goto while_4
+success_48:
+  Goto while_4
+else_44:
+  Goto while_55
+while_55:
+  Sense Ahead inner_55 and_56 Marker 1
+and_56:
+  Sense Ahead done_55 inner_55 Marker 2
+inner_55:
+  Turn Right
+  Goto while_55
+done_55:
+  Move fail_58
+  Goto while_4
+fail_58:
+  Flip 2 rand_yes_60 rand_no_60
+rand_yes_60:
+  Flip 2 rand_yes_62 rand_no_62
+rand_yes_62:
+  Turn Left
+  Goto while_4
+rand_no_62:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_62:
+  Goto while_4
+rand_no_60:
+  Flip 2 rand_yes_64 rand_no_64
+rand_yes_64:
+  Turn Right
+  Goto while_4
+rand_no_64:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_64:
+  Goto while_4
+end_of_rand_60:
+  Goto while_4
+success_58:
+  Goto while_4
+endif_44:
+  Goto while_4
+else_43:
+  Sense Here while_66 while_76 Marker 2
+if_65:
+  Goto while_66
+while_66:
+  Sense Ahead inner_66 and_67 Marker 1
+and_67:
+  Sense Ahead inner_66 done_66 Marker 2
+inner_66:
+  Turn Right
+  Goto while_66
+done_66:
+  Move fail_69
+  Goto while_4
+fail_69:
+  Flip 2 rand_yes_71 rand_no_71
+rand_yes_71:
+  Flip 2 rand_yes_73 rand_no_73
+rand_yes_73:
+  Turn Left
+  Goto while_4
+rand_no_73:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_73:
+  Goto while_4
+rand_no_71:
+  Flip 2 rand_yes_75 rand_no_75
+rand_yes_75:
+  Turn Right
+  Goto while_4
+rand_no_75:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_75:
+  Goto while_4
+end_of_rand_71:
+  Goto while_4
+success_69:
+  Goto while_4
+else_65:
+  Goto while_76
+while_76:
+  Sense Ahead done_76 inner_76 Home
+inner_76:
+  Turn Right
+  Goto while_76
+done_76:
+  Move fail_78
+  Goto while_4
+fail_78:
+  Flip 2 rand_yes_80 rand_no_80
+rand_yes_80:
+  Flip 2 rand_yes_82 rand_no_82
+rand_yes_82:
+  Turn Left
+  Goto while_4
+rand_no_82:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_82:
+  Goto while_4
+rand_no_80:
+  Flip 2 rand_yes_84 rand_no_84
+rand_yes_84:
+  Turn Right
+  Goto while_4
+rand_no_84:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_84:
+  Goto while_4
+end_of_rand_80:
+  Goto while_4
+success_78:
+  Goto while_4
+endif_65:
+  Goto while_4
+endif_43:
+  Goto while_4
+else_41:
+  Sense Ahead if_86 else_86 Home
+if_86:
+  Mark 0
+  Move fail_88
+  Goto while_4
+fail_88:
+  Flip 2 rand_yes_90 rand_no_90
+rand_yes_90:
+  Flip 2 rand_yes_92 rand_no_92
+rand_yes_92:
+  Turn Left
+  Goto while_4
+rand_no_92:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_92:
+  Goto while_4
+rand_no_90:
+  Flip 2 rand_yes_94 rand_no_94
+rand_yes_94:
+  Turn Right
+  Goto while_4
+rand_no_94:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_94:
+  Goto while_4
+end_of_rand_90:
+  Goto while_4
+success_88:
+  Goto while_4
+else_86:
+  Sense Ahead if_95 else_95 Marker 0
+if_95:
+  Sense Ahead if_96 else_96 Marker 1
+if_96:
+  Sense Ahead if_97 else_97 Marker 2
+if_97:
+  Move fail_99
+  Goto while_4
+fail_99:
+  Flip 2 rand_yes_101 rand_no_101
+rand_yes_101:
+  Flip 2 rand_yes_103 rand_no_103
+rand_yes_103:
+  Turn Left
+  Goto while_4
+rand_no_103:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_103:
+  Goto while_4
+rand_no_101:
+  Flip 2 rand_yes_105 rand_no_105
+rand_yes_105:
+  Turn Right
+  Goto while_4
+rand_no_105:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_105:
+  Goto while_4
+end_of_rand_101:
+  Goto while_4
+success_99:
+  Goto while_4
+else_97:
+  Mark 0
+  Mark 1
+  Mark 2
+  Move fail_107
+  Goto while_4
+fail_107:
+  Flip 2 rand_yes_109 rand_no_109
+rand_yes_109:
+  Flip 2 rand_yes_111 rand_no_111
+rand_yes_111:
+  Turn Left
+  Goto while_4
+rand_no_111:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_111:
+  Goto while_4
+rand_no_109:
+  Flip 2 rand_yes_113 rand_no_113
+rand_yes_113:
+  Turn Right
+  Goto while_4
+rand_no_113:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_113:
+  Goto while_4
+end_of_rand_109:
+  Goto while_4
+success_107:
+  Goto while_4
+endif_97:
+  Goto while_4
+else_96:
+  Sense Ahead if_114 else_114 Marker 2
+if_114:
+  Mark 0
+  Mark 1
+  Unmark 2
+  Move fail_116
+  Goto while_4
+fail_116:
+  Flip 2 rand_yes_118 rand_no_118
+rand_yes_118:
+  Flip 2 rand_yes_120 rand_no_120
+rand_yes_120:
+  Turn Left
+  Goto while_4
+rand_no_120:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_120:
+  Goto while_4
+rand_no_118:
+  Flip 2 rand_yes_122 rand_no_122
+rand_yes_122:
+  Turn Right
+  Goto while_4
+rand_no_122:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_122:
+  Goto while_4
+end_of_rand_118:
+  Goto while_4
+success_116:
+  Goto while_4
+else_114:
+  Mark 0
+  Unmark 1
+  Mark 2
+  Move fail_124
+  Goto while_4
+fail_124:
+  Flip 2 rand_yes_126 rand_no_126
+rand_yes_126:
+  Flip 2 rand_yes_128 rand_no_128
+rand_yes_128:
+  Turn Left
+  Goto while_4
+rand_no_128:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_128:
+  Goto while_4
+rand_no_126:
+  Flip 2 rand_yes_130 rand_no_130
+rand_yes_130:
+  Turn Right
+  Goto while_4
+rand_no_130:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_130:
+  Goto while_4
+end_of_rand_126:
+  Goto while_4
+success_124:
+  Goto while_4
+endif_114:
+  Goto while_4
+endif_96:
+  Goto while_4
+else_95:
+  Move fail_132
+  Goto while_4
+fail_132:
+  Flip 2 rand_yes_134 rand_no_134
+rand_yes_134:
+  Flip 2 rand_yes_136 rand_no_136
+rand_yes_136:
+  Turn Left
+  Goto while_4
+rand_no_136:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_136:
+  Goto while_4
+rand_no_134:
+  Flip 2 rand_yes_138 rand_no_138
+rand_yes_138:
+  Turn Right
+  Goto while_4
+rand_no_138:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_138:
+  Goto while_4
+end_of_rand_134:
+  Goto while_4
+success_132:
+  Goto while_4
+endif_95:
+  Goto while_4
+endif_86:
+  Goto while_4
+endif_41:
+  Goto while_4
+case_any_38:
+  Move fail_141
+  Goto while_4
+fail_141:
+  Flip 2 rand_yes_143 rand_no_143
+rand_yes_143:
+  Flip 2 rand_yes_145 rand_no_145
+rand_yes_145:
+  Turn Left
+  Goto while_4
+rand_no_145:
+  Turn Left
+  Turn Left
+  Goto while_4
+end_of_rand_145:
+  Goto while_4
+rand_no_143:
+  Flip 2 rand_yes_147 rand_no_147
+rand_yes_147:
+  Turn Right
+  Goto while_4
+rand_no_147:
+  Turn Right
+  Turn Right
+  Goto while_4
+end_of_rand_147:
+  Goto while_4
+end_of_rand_143:
+  Goto while_4
+success_141:
+  Goto while_4
+missed_all_38:
+  Goto while_4
+endif_35:
+  Goto while_4
+endif_6:
+  Goto while_4
+done_4:
+  Goto while_148
+while_148:
+  Sense Ahead and_149 inner_148 Home
+and_149:
+  Sense LeftAhead and_150 inner_148 Home
+and_150:
+  Sense RightAhead done_148 inner_148 Home
+inner_148:
+  Turn Right
+  Goto while_148
+done_148:
+  Move fail_151
+  Drop
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto fun_main
+fail_151:
+  Drop
+  Drop
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto fun_main
+success_151:
+  Drop
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto fun_main
+case_any_1:
+  Sense Here else_154 if_154 Home
+if_154:
+  Sense Here while_158 else_156 FoeHome
+if_156:
+  Goto while_158
+while_158:
+  Sense Here inner_158 fun_main FoeHome
+inner_158:
+  Sense Ahead and_161 else_160 Foe
+and_161:
+  Sense LeftAhead and_162 else_160 Foe
+and_162:
+  Sense RightAhead while_163 else_160 Foe
+if_160:
+  Goto while_163
+while_163:
+  Sense Here inner_163 while_158 FoeHome
+inner_163:
+  Move fail_165
+  Goto while_163
+fail_165:
+  Flip 2 rand_yes_167 rand_no_167
+rand_yes_167:
+  Flip 2 rand_yes_169 rand_no_169
+rand_yes_169:
+  Turn Left
+  Goto while_163
+rand_no_169:
+  Turn Left
+  Turn Left
+  Goto while_163
+end_of_rand_169:
+  Goto while_163
+rand_no_167:
+  Flip 2 rand_yes_171 rand_no_171
+rand_yes_171:
+  Turn Right
+  Goto while_163
+rand_no_171:
+  Turn Right
+  Turn Right
+  Goto while_163
+end_of_rand_171:
+  Goto while_163
+end_of_rand_167:
+  Goto while_163
+success_165:
+  Goto while_163
+done_163:
+  Goto while_158
+else_160:
+  Sense Here and_173 else_172 Food
+and_173:
+  Sense Here else_172 if_172 FriendWithFood
+if_172:
+  PickUp while_176
+  Goto while_176
+fail_175:
+  Goto while_176
+success_175:
+  Goto while_176
+while_176:
+  Sense Ahead inner_176 or_177 FoeHome
+or_177:
+  Sense Ahead inner_176 or_178 Friend
+or_178:
+  Sense Ahead inner_176 done_176 Foe
+inner_176:
+  Turn Right
+  Goto while_176
+done_176:
+  Move success_179
+  Drop
+  Goto while_180
+fail_179:
+  Drop
+  Goto while_180
+success_179:
+  Drop
+  Goto while_180
+while_180:
+  Sense Ahead or_181 inner_180 FoeHome
+or_181:
+  Sense Ahead inner_180 or_182 Friend
+or_182:
+  Sense Ahead inner_180 done_180 Foe
+inner_180:
+  Turn Right
+  Goto while_180
+done_180:
+  Move while_158
+  Goto while_158
+fail_183:
+  Goto while_158
+success_183:
+  Goto while_158
+else_172:
+  Turn Right
+  Goto while_158
+endif_172:
+  Goto while_158
+endif_160:
+  Goto while_158
+done_158:
+  Goto fun_main
+else_156:
+  PickUp fail_184
+  Goto success_184
+fail_184:
+  Sense LeftAhead and_186 else_185 Foe
+and_186:
+  Sense RightAhead if_185 else_185 Foe
+if_185:
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto success_184
+else_185:
+  Sense Here if_188 else_188 FriendWithFood
+if_188:
+  Sense Here if_190 else_190 Marker 0
+if_190:
+  Sense Here if_192 else_192 Marker 1
+if_192:
+  Sense Here while_194 while_204 Marker 2
+if_193:
+  Goto while_194
+while_194:
+  Sense Ahead and_195 inner_194 Marker 1
+and_195:
+  Sense Ahead inner_194 done_194 Marker 2
+inner_194:
+  Turn Right
+  Goto while_194
+done_194:
+  Move fail_197
+  Goto success_184
+fail_197:
+  Flip 2 rand_yes_199 rand_no_199
+rand_yes_199:
+  Flip 2 rand_yes_201 rand_no_201
+rand_yes_201:
+  Turn Left
+  Goto success_184
+rand_no_201:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_201:
+  Goto success_184
+rand_no_199:
+  Flip 2 rand_yes_203 rand_no_203
+rand_yes_203:
+  Turn Right
+  Goto success_184
+rand_no_203:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_203:
+  Goto success_184
+end_of_rand_199:
+  Goto success_184
+success_197:
+  Goto success_184
+else_193:
+  Goto while_204
+while_204:
+  Sense Ahead inner_204 and_205 Marker 1
+and_205:
+  Sense Ahead done_204 inner_204 Marker 2
+inner_204:
+  Turn Right
+  Goto while_204
+done_204:
+  Move fail_207
+  Goto success_184
+fail_207:
+  Flip 2 rand_yes_209 rand_no_209
+rand_yes_209:
+  Flip 2 rand_yes_211 rand_no_211
+rand_yes_211:
+  Turn Left
+  Goto success_184
+rand_no_211:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_211:
+  Goto success_184
+rand_no_209:
+  Flip 2 rand_yes_213 rand_no_213
+rand_yes_213:
+  Turn Right
+  Goto success_184
+rand_no_213:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_213:
+  Goto success_184
+end_of_rand_209:
+  Goto success_184
+success_207:
+  Goto success_184
+endif_193:
+  Goto success_184
+else_192:
+  Sense Here while_215 while_225 Marker 2
+if_214:
+  Goto while_215
+while_215:
+  Sense Ahead inner_215 and_216 Marker 1
+and_216:
+  Sense Ahead inner_215 done_215 Marker 2
+inner_215:
+  Turn Right
+  Goto while_215
+done_215:
+  Move fail_218
+  Goto success_184
+fail_218:
+  Flip 2 rand_yes_220 rand_no_220
+rand_yes_220:
+  Flip 2 rand_yes_222 rand_no_222
+rand_yes_222:
+  Turn Left
+  Goto success_184
+rand_no_222:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_222:
+  Goto success_184
+rand_no_220:
+  Flip 2 rand_yes_224 rand_no_224
+rand_yes_224:
+  Turn Right
+  Goto success_184
+rand_no_224:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_224:
+  Goto success_184
+end_of_rand_220:
+  Goto success_184
+success_218:
+  Goto success_184
+else_214:
+  Goto while_225
+while_225:
+  Sense Ahead done_225 inner_225 Home
+inner_225:
+  Turn Right
+  Goto while_225
+done_225:
+  Move fail_227
+  Goto success_184
+fail_227:
+  Flip 2 rand_yes_229 rand_no_229
+rand_yes_229:
+  Flip 2 rand_yes_231 rand_no_231
+rand_yes_231:
+  Turn Left
+  Goto success_184
+rand_no_231:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_231:
+  Goto success_184
+rand_no_229:
+  Flip 2 rand_yes_233 rand_no_233
+rand_yes_233:
+  Turn Right
+  Goto success_184
+rand_no_233:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_233:
+  Goto success_184
+end_of_rand_229:
+  Goto success_184
+success_227:
+  Goto success_184
+endif_214:
+  Goto success_184
+endif_192:
+  Goto success_184
+else_190:
+  Sense Ahead if_235 else_235 Home
+if_235:
+  Mark 0
+  Move fail_237
+  Goto success_184
+fail_237:
+  Flip 2 rand_yes_239 rand_no_239
+rand_yes_239:
+  Flip 2 rand_yes_241 rand_no_241
+rand_yes_241:
+  Turn Left
+  Goto success_184
+rand_no_241:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_241:
+  Goto success_184
+rand_no_239:
+  Flip 2 rand_yes_243 rand_no_243
+rand_yes_243:
+  Turn Right
+  Goto success_184
+rand_no_243:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_243:
+  Goto success_184
+end_of_rand_239:
+  Goto success_184
+success_237:
+  Goto success_184
+else_235:
+  Sense Ahead if_244 else_244 Marker 0
+if_244:
+  Sense Ahead if_245 else_245 Marker 1
+if_245:
+  Sense Ahead if_246 else_246 Marker 2
+if_246:
+  Move fail_248
+  Goto success_184
+fail_248:
+  Flip 2 rand_yes_250 rand_no_250
+rand_yes_250:
+  Flip 2 rand_yes_252 rand_no_252
+rand_yes_252:
+  Turn Left
+  Goto success_184
+rand_no_252:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_252:
+  Goto success_184
+rand_no_250:
+  Flip 2 rand_yes_254 rand_no_254
+rand_yes_254:
+  Turn Right
+  Goto success_184
+rand_no_254:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_254:
+  Goto success_184
+end_of_rand_250:
+  Goto success_184
+success_248:
+  Goto success_184
+else_246:
+  Mark 0
+  Mark 1
+  Mark 2
+  Move fail_256
+  Goto success_184
+fail_256:
+  Flip 2 rand_yes_258 rand_no_258
+rand_yes_258:
+  Flip 2 rand_yes_260 rand_no_260
+rand_yes_260:
+  Turn Left
+  Goto success_184
+rand_no_260:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_260:
+  Goto success_184
+rand_no_258:
+  Flip 2 rand_yes_262 rand_no_262
+rand_yes_262:
+  Turn Right
+  Goto success_184
+rand_no_262:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_262:
+  Goto success_184
+end_of_rand_258:
+  Goto success_184
+success_256:
+  Goto success_184
+endif_246:
+  Goto success_184
+else_245:
+  Sense Ahead if_263 else_263 Marker 2
+if_263:
+  Mark 0
+  Mark 1
+  Unmark 2
+  Move fail_265
+  Goto success_184
+fail_265:
+  Flip 2 rand_yes_267 rand_no_267
+rand_yes_267:
+  Flip 2 rand_yes_269 rand_no_269
+rand_yes_269:
+  Turn Left
+  Goto success_184
+rand_no_269:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_269:
+  Goto success_184
+rand_no_267:
+  Flip 2 rand_yes_271 rand_no_271
+rand_yes_271:
+  Turn Right
+  Goto success_184
+rand_no_271:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_271:
+  Goto success_184
+end_of_rand_267:
+  Goto success_184
+success_265:
+  Goto success_184
+else_263:
+  Mark 0
+  Unmark 1
+  Mark 2
+  Move fail_273
+  Goto success_184
+fail_273:
+  Flip 2 rand_yes_275 rand_no_275
+rand_yes_275:
+  Flip 2 rand_yes_277 rand_no_277
+rand_yes_277:
+  Turn Left
+  Goto success_184
+rand_no_277:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_277:
+  Goto success_184
+rand_no_275:
+  Flip 2 rand_yes_279 rand_no_279
+rand_yes_279:
+  Turn Right
+  Goto success_184
+rand_no_279:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_279:
+  Goto success_184
+end_of_rand_275:
+  Goto success_184
+success_273:
+  Goto success_184
+endif_263:
+  Goto success_184
+endif_245:
+  Goto success_184
+else_244:
+  Move fail_281
+  Goto success_184
+fail_281:
+  Flip 2 rand_yes_283 rand_no_283
+rand_yes_283:
+  Flip 2 rand_yes_285 rand_no_285
+rand_yes_285:
+  Turn Left
+  Goto success_184
+rand_no_285:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_285:
+  Goto success_184
+rand_no_283:
+  Flip 2 rand_yes_287 rand_no_287
+rand_yes_287:
+  Turn Right
+  Goto success_184
+rand_no_287:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_287:
+  Goto success_184
+end_of_rand_283:
+  Goto success_184
+success_281:
+  Goto success_184
+endif_244:
+  Goto success_184
+endif_235:
+  Goto success_184
+endif_190:
+  Goto success_184
+else_188:
+  Sense Here if_288 else_288 Marker 5
+if_288:
+  Sense Here and_291 if_290 Marker 3
+and_291:
+  Sense Here else_290 if_290 Marker 4
+if_290:
+  Sense Ahead while_295 or_293 Food
+or_293:
+  Sense RightAhead while_295 or_294 Food
+or_294:
+  Sense LeftAhead while_295 else_292 Food
+if_292:
+  Goto while_295
+while_295:
+  Sense Ahead done_295 inner_295 Food
+inner_295:
+  Turn Left
+  Goto while_295
+done_295:
+  Move fail_297
+  Goto success_184
+fail_297:
+  Flip 2 rand_yes_299 rand_no_299
+rand_yes_299:
+  Flip 2 rand_yes_301 rand_no_301
+rand_yes_301:
+  Turn Left
+  Goto success_184
+rand_no_301:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_301:
+  Goto success_184
+rand_no_299:
+  Flip 2 rand_yes_303 rand_no_303
+rand_yes_303:
+  Turn Right
+  Goto success_184
+rand_no_303:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_303:
+  Goto success_184
+end_of_rand_299:
+  Goto success_184
+success_297:
+  Goto success_184
+else_292:
+  Turn Right
+  Turn Right
+  Turn Right
+  Sense Ahead while_308 or_306 Food
+or_306:
+  Sense RightAhead while_308 or_307 Food
+or_307:
+  Sense LeftAhead while_308 else_305 Food
+if_305:
+  Goto while_308
+while_308:
+  Sense Ahead done_308 inner_308 Food
+inner_308:
+  Turn Left
+  Goto while_308
+done_308:
+  Move fail_310
+  Goto success_184
+fail_310:
+  Flip 2 rand_yes_312 rand_no_312
+rand_yes_312:
+  Flip 2 rand_yes_314 rand_no_314
+rand_yes_314:
+  Turn Left
+  Goto success_184
+rand_no_314:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_314:
+  Goto success_184
+rand_no_312:
+  Flip 2 rand_yes_316 rand_no_316
+rand_yes_316:
+  Turn Right
+  Goto success_184
+rand_no_316:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_316:
+  Goto success_184
+end_of_rand_312:
+  Goto success_184
+success_310:
+  Goto success_184
+else_305:
+  Unmark 5
+  Goto success_184
+endif_305:
+  Goto success_184
+endif_292:
+  Goto success_184
+else_290:
+  Sense Ahead if_317 or_318 Marker 5
+or_318:
+  Sense RightAhead if_317 or_319 Marker 5
+or_319:
+  Sense LeftAhead if_317 else_317 Marker 5
+if_317:
+  Sense Here else_320 while_321 Marker 3
+if_320:
+  Goto while_321
+while_321:
+  Sense Ahead done_321 or_322 Marker 3
+or_322:
+  Sense Ahead done_321 inner_321 Marker 4
+inner_321:
+  Turn Right
+  Goto while_321
+done_321:
+  Move fail_324
+  Goto success_184
+fail_324:
+  Flip 2 rand_yes_326 rand_no_326
+rand_yes_326:
+  Flip 2 rand_yes_328 rand_no_328
+rand_yes_328:
+  Turn Left
+  Goto success_184
+rand_no_328:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_328:
+  Goto success_184
+rand_no_326:
+  Flip 2 rand_yes_330 rand_no_330
+rand_yes_330:
+  Turn Right
+  Goto success_184
+rand_no_330:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_330:
+  Goto success_184
+end_of_rand_326:
+  Goto success_184
+success_324:
+  Goto success_184
+else_320:
+  Sense Here while_342 while_332 Marker 4
+if_331:
+  Goto while_332
+while_332:
+  Sense Ahead and_333 done_332 Marker 4
+and_333:
+  Sense Ahead done_332 inner_332 Marker 3
+inner_332:
+  Turn Right
+  Goto while_332
+done_332:
+  Move fail_335
+  Goto success_184
+fail_335:
+  Flip 2 rand_yes_337 rand_no_337
+rand_yes_337:
+  Flip 2 rand_yes_339 rand_no_339
+rand_yes_339:
+  Turn Left
+  Goto success_184
+rand_no_339:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_339:
+  Goto success_184
+rand_no_337:
+  Flip 2 rand_yes_341 rand_no_341
+rand_yes_341:
+  Turn Right
+  Goto success_184
+rand_no_341:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_341:
+  Goto success_184
+end_of_rand_337:
+  Goto success_184
+success_335:
+  Goto success_184
+else_331:
+  Goto while_342
+while_342:
+  Sense Ahead and_343 done_342 Marker 3
+and_343:
+  Sense Ahead done_342 inner_342 Marker 4
+inner_342:
+  Turn Right
+  Goto while_342
+done_342:
+  Move fail_345
+  Goto success_184
+fail_345:
+  Flip 2 rand_yes_347 rand_no_347
+rand_yes_347:
+  Flip 2 rand_yes_349 rand_no_349
+rand_yes_349:
+  Turn Left
+  Goto success_184
+rand_no_349:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_349:
+  Goto success_184
+rand_no_347:
+  Flip 2 rand_yes_351 rand_no_351
+rand_yes_351:
+  Turn Right
+  Goto success_184
+rand_no_351:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_351:
+  Goto success_184
+end_of_rand_347:
+  Goto success_184
+success_345:
+  Goto success_184
+endif_331:
+  Goto success_184
+endif_320:
+  Goto success_184
+else_317:
+  Turn Right
+  Turn Right
+  Turn Right
+  Sense Ahead if_353 or_354 Marker 5
+or_354:
+  Sense RightAhead if_353 or_355 Marker 5
+or_355:
+  Sense LeftAhead if_353 else_353 Marker 5
+if_353:
+  Sense Here else_356 while_357 Marker 3
+if_356:
+  Goto while_357
+while_357:
+  Sense Ahead done_357 or_358 Marker 3
+or_358:
+  Sense Ahead done_357 inner_357 Marker 4
+inner_357:
+  Turn Right
+  Goto while_357
+done_357:
+  Move fail_360
+  Goto success_184
+fail_360:
+  Flip 2 rand_yes_362 rand_no_362
+rand_yes_362:
+  Flip 2 rand_yes_364 rand_no_364
+rand_yes_364:
+  Turn Left
+  Goto success_184
+rand_no_364:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_364:
+  Goto success_184
+rand_no_362:
+  Flip 2 rand_yes_366 rand_no_366
+rand_yes_366:
+  Turn Right
+  Goto success_184
+rand_no_366:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_366:
+  Goto success_184
+end_of_rand_362:
+  Goto success_184
+success_360:
+  Goto success_184
+else_356:
+  Sense Here while_378 while_368 Marker 4
+if_367:
+  Goto while_368
+while_368:
+  Sense Ahead and_369 done_368 Marker 4
+and_369:
+  Sense Ahead done_368 inner_368 Marker 3
+inner_368:
+  Turn Right
+  Goto while_368
+done_368:
+  Move fail_371
+  Goto success_184
+fail_371:
+  Flip 2 rand_yes_373 rand_no_373
+rand_yes_373:
+  Flip 2 rand_yes_375 rand_no_375
+rand_yes_375:
+  Turn Left
+  Goto success_184
+rand_no_375:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_375:
+  Goto success_184
+rand_no_373:
+  Flip 2 rand_yes_377 rand_no_377
+rand_yes_377:
+  Turn Right
+  Goto success_184
+rand_no_377:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_377:
+  Goto success_184
+end_of_rand_373:
+  Goto success_184
+success_371:
+  Goto success_184
+else_367:
+  Goto while_378
+while_378:
+  Sense Ahead and_379 done_378 Marker 3
+and_379:
+  Sense Ahead done_378 inner_378 Marker 4
+inner_378:
+  Turn Right
+  Goto while_378
+done_378:
+  Move fail_381
+  Goto success_184
+fail_381:
+  Flip 2 rand_yes_383 rand_no_383
+rand_yes_383:
+  Flip 2 rand_yes_385 rand_no_385
+rand_yes_385:
+  Turn Left
+  Goto success_184
+rand_no_385:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_385:
+  Goto success_184
+rand_no_383:
+  Flip 2 rand_yes_387 rand_no_387
+rand_yes_387:
+  Turn Right
+  Goto success_184
+rand_no_387:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_387:
+  Goto success_184
+end_of_rand_383:
+  Goto success_184
+success_381:
+  Goto success_184
+endif_367:
+  Goto success_184
+endif_356:
+  Goto success_184
+else_353:
+  Unmark 5
+  Unmark 4
+  Unmark 3
+  Goto success_184
+endif_353:
+  Goto success_184
+endif_317:
+  Goto success_184
+endif_290:
+  Goto success_184
+else_288:
+  Sense Ahead and_390 else_389 Food
+and_390:
+  Sense Ahead else_389 if_389 Home
+if_389:
+  Mark 5
+  Move fail_392
+  Goto success_184
+fail_392:
+  Flip 2 rand_yes_394 rand_no_394
+rand_yes_394:
+  Flip 2 rand_yes_396 rand_no_396
+rand_yes_396:
+  Turn Left
+  Goto success_184
+rand_no_396:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_396:
+  Goto success_184
+rand_no_394:
+  Flip 2 rand_yes_398 rand_no_398
+rand_yes_398:
+  Turn Right
+  Goto success_184
+rand_no_398:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_398:
+  Goto success_184
+end_of_rand_394:
+  Goto success_184
+success_392:
+  Goto success_184
+else_389:
+  Sense Ahead if_399 else_399 Marker 5
+if_399:
+  Sense Ahead if_400 else_400 Marker 3
+if_400:
+  Sense Ahead if_401 else_401 Marker 4
+if_401:
+  Move fail_403
+  Goto success_184
+fail_403:
+  Flip 2 rand_yes_405 rand_no_405
+rand_yes_405:
+  Flip 2 rand_yes_407 rand_no_407
+rand_yes_407:
+  Turn Left
+  Goto success_184
+rand_no_407:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_407:
+  Goto success_184
+rand_no_405:
+  Flip 2 rand_yes_409 rand_no_409
+rand_yes_409:
+  Turn Right
+  Goto success_184
+rand_no_409:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_409:
+  Goto success_184
+end_of_rand_405:
+  Goto success_184
+success_403:
+  Goto success_184
+else_401:
+  Mark 5
+  Mark 3
+  Mark 4
+  Move fail_411
+  Goto success_184
+fail_411:
+  Flip 2 rand_yes_413 rand_no_413
+rand_yes_413:
+  Flip 2 rand_yes_415 rand_no_415
+rand_yes_415:
+  Turn Left
+  Goto success_184
+rand_no_415:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_415:
+  Goto success_184
+rand_no_413:
+  Flip 2 rand_yes_417 rand_no_417
+rand_yes_417:
+  Turn Right
+  Goto success_184
+rand_no_417:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_417:
+  Goto success_184
+end_of_rand_413:
+  Goto success_184
+success_411:
+  Goto success_184
+endif_401:
+  Goto success_184
+else_400:
+  Sense Ahead if_418 else_418 Marker 4
+if_418:
+  Mark 5
+  Mark 3
+  Unmark 4
+  Move fail_420
+  Goto success_184
+fail_420:
+  Flip 2 rand_yes_422 rand_no_422
+rand_yes_422:
+  Flip 2 rand_yes_424 rand_no_424
+rand_yes_424:
+  Turn Left
+  Goto success_184
+rand_no_424:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_424:
+  Goto success_184
+rand_no_422:
+  Flip 2 rand_yes_426 rand_no_426
+rand_yes_426:
+  Turn Right
+  Goto success_184
+rand_no_426:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_426:
+  Goto success_184
+end_of_rand_422:
+  Goto success_184
+success_420:
+  Goto success_184
+else_418:
+  Mark 5
+  Unmark 3
+  Mark 4
+  Move fail_428
+  Goto success_184
+fail_428:
+  Flip 2 rand_yes_430 rand_no_430
+rand_yes_430:
+  Flip 2 rand_yes_432 rand_no_432
+rand_yes_432:
+  Turn Left
+  Goto success_184
+rand_no_432:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_432:
+  Goto success_184
+rand_no_430:
+  Flip 2 rand_yes_434 rand_no_434
+rand_yes_434:
+  Turn Right
+  Goto success_184
+rand_no_434:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_434:
+  Goto success_184
+end_of_rand_430:
+  Goto success_184
+success_428:
+  Goto success_184
+endif_418:
+  Goto success_184
+endif_400:
+  Goto success_184
+else_399:
+  Move fail_436
+  Goto success_184
+fail_436:
+  Flip 2 rand_yes_438 rand_no_438
+rand_yes_438:
+  Flip 2 rand_yes_440 rand_no_440
+rand_yes_440:
+  Turn Left
+  Goto success_184
+rand_no_440:
+  Turn Left
+  Turn Left
+  Goto success_184
+end_of_rand_440:
+  Goto success_184
+rand_no_438:
+  Flip 2 rand_yes_442 rand_no_442
+rand_yes_442:
+  Turn Right
+  Goto success_184
+rand_no_442:
+  Turn Right
+  Turn Right
+  Goto success_184
+end_of_rand_442:
+  Goto success_184
+end_of_rand_438:
+  Goto success_184
+success_436:
+  Goto success_184
+endif_399:
+  Goto success_184
+endif_389:
+  Goto success_184
+endif_288:
+  Goto success_184
+endif_188:
+  Goto success_184
+endif_185:
+  Goto success_184
+success_184:
+  Sense Here if_443 else_443 FriendWithFood
+if_443:
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto fun_main
+else_443:
+  Drop
+  Goto fun_main
+endif_443:
+  Goto fun_main
+endif_156:
+  Goto fun_main
+else_154:
+  Sense Here while_448 else_446 FoeHome
+if_446:
+  Goto while_448
+while_448:
+  Sense Here inner_448 fun_main FoeHome
+inner_448:
+  Sense Ahead and_451 else_450 Foe
+and_451:
+  Sense LeftAhead and_452 else_450 Foe
+and_452:
+  Sense RightAhead while_453 else_450 Foe
+if_450:
+  Goto while_453
+while_453:
+  Sense Here inner_453 while_448 FoeHome
+inner_453:
+  Move fail_455
+  Goto while_453
+fail_455:
+  Flip 2 rand_yes_457 rand_no_457
+rand_yes_457:
+  Flip 2 rand_yes_459 rand_no_459
+rand_yes_459:
+  Turn Left
+  Goto while_453
+rand_no_459:
+  Turn Left
+  Turn Left
+  Goto while_453
+end_of_rand_459:
+  Goto while_453
+rand_no_457:
+  Flip 2 rand_yes_461 rand_no_461
+rand_yes_461:
+  Turn Right
+  Goto while_453
+rand_no_461:
+  Turn Right
+  Turn Right
+  Goto while_453
+end_of_rand_461:
+  Goto while_453
+end_of_rand_457:
+  Goto while_453
+success_455:
+  Goto while_453
+done_453:
+  Goto while_448
+else_450:
+  Sense Here and_463 else_462 Food
+and_463:
+  Sense Here else_462 if_462 FriendWithFood
+if_462:
+  PickUp while_466
+  Goto while_466
+fail_465:
+  Goto while_466
+success_465:
+  Goto while_466
+while_466:
+  Sense Ahead inner_466 or_467 FoeHome
+or_467:
+  Sense Ahead inner_466 or_468 Friend
+or_468:
+  Sense Ahead inner_466 done_466 Foe
+inner_466:
+  Turn Right
+  Goto while_466
+done_466:
+  Move success_469
+  Drop
+  Goto while_470
+fail_469:
+  Drop
+  Goto while_470
+success_469:
+  Drop
+  Goto while_470
+while_470:
+  Sense Ahead or_471 inner_470 FoeHome
+or_471:
+  Sense Ahead inner_470 or_472 Friend
+or_472:
+  Sense Ahead inner_470 done_470 Foe
+inner_470:
+  Turn Right
+  Goto while_470
+done_470:
+  Move while_448
+  Goto while_448
+fail_473:
+  Goto while_448
+success_473:
+  Goto while_448
+else_462:
+  Turn Right
+  Goto while_448
+endif_462:
+  Goto while_448
+endif_450:
+  Goto while_448
+done_448:
+  Goto fun_main
+else_446:
+  Sense LeftAhead and_476 else_475 Foe
+and_476:
+  Sense RightAhead if_475 else_475 Foe
+if_475:
+  Turn Right
+  Turn Right
+  Turn Right
+  Goto fun_main
+else_475:
+  Sense Here case_478FriendWithFood case_any_478 FriendWithFood
+case_missed_478FriendWithFood:
+  Move fail_581
+  Goto fun_main
+case_478FriendWithFood:
+  Sense Here if_481 else_481 Marker 0
+if_481:
+  Sense Here if_483 else_483 Marker 1
+if_483:
+  Sense Here while_485 while_495 Marker 2
+if_484:
+  Goto while_485
+while_485:
+  Sense Ahead and_486 inner_485 Marker 1
+and_486:
+  Sense Ahead inner_485 done_485 Marker 2
+inner_485:
+  Turn Right
+  Goto while_485
+done_485:
+  Move fail_488
+  Goto fun_main
+fail_488:
+  Flip 2 rand_yes_490 rand_no_490
+rand_yes_490:
+  Flip 2 rand_yes_492 rand_no_492
+rand_yes_492:
+  Turn Left
+  Goto fun_main
+rand_no_492:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_492:
+  Goto fun_main
+rand_no_490:
+  Flip 2 rand_yes_494 rand_no_494
+rand_yes_494:
+  Turn Right
+  Goto fun_main
+rand_no_494:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_494:
+  Goto fun_main
+end_of_rand_490:
+  Goto fun_main
+success_488:
+  Goto fun_main
+else_484:
+  Goto while_495
+while_495:
+  Sense Ahead inner_495 and_496 Marker 1
+and_496:
+  Sense Ahead done_495 inner_495 Marker 2
+inner_495:
+  Turn Right
+  Goto while_495
+done_495:
+  Move fail_498
+  Goto fun_main
+fail_498:
+  Flip 2 rand_yes_500 rand_no_500
+rand_yes_500:
+  Flip 2 rand_yes_502 rand_no_502
+rand_yes_502:
+  Turn Left
+  Goto fun_main
+rand_no_502:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_502:
+  Goto fun_main
+rand_no_500:
+  Flip 2 rand_yes_504 rand_no_504
+rand_yes_504:
+  Turn Right
+  Goto fun_main
+rand_no_504:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_504:
+  Goto fun_main
+end_of_rand_500:
+  Goto fun_main
+success_498:
+  Goto fun_main
+endif_484:
+  Goto fun_main
+else_483:
+  Sense Here while_506 while_516 Marker 2
+if_505:
+  Goto while_506
+while_506:
+  Sense Ahead inner_506 and_507 Marker 1
+and_507:
+  Sense Ahead inner_506 done_506 Marker 2
+inner_506:
+  Turn Right
+  Goto while_506
+done_506:
+  Move fail_509
+  Goto fun_main
+fail_509:
+  Flip 2 rand_yes_511 rand_no_511
+rand_yes_511:
+  Flip 2 rand_yes_513 rand_no_513
+rand_yes_513:
+  Turn Left
+  Goto fun_main
+rand_no_513:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_513:
+  Goto fun_main
+rand_no_511:
+  Flip 2 rand_yes_515 rand_no_515
+rand_yes_515:
+  Turn Right
+  Goto fun_main
+rand_no_515:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_515:
+  Goto fun_main
+end_of_rand_511:
+  Goto fun_main
+success_509:
+  Goto fun_main
+else_505:
+  Goto while_516
+while_516:
+  Sense Ahead done_516 inner_516 Home
+inner_516:
+  Turn Right
+  Goto while_516
+done_516:
+  Move fail_518
+  Goto fun_main
+fail_518:
+  Flip 2 rand_yes_520 rand_no_520
+rand_yes_520:
+  Flip 2 rand_yes_522 rand_no_522
+rand_yes_522:
+  Turn Left
+  Goto fun_main
+rand_no_522:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_522:
+  Goto fun_main
+rand_no_520:
+  Flip 2 rand_yes_524 rand_no_524
+rand_yes_524:
+  Turn Right
+  Goto fun_main
+rand_no_524:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_524:
+  Goto fun_main
+end_of_rand_520:
+  Goto fun_main
+success_518:
+  Goto fun_main
+endif_505:
+  Goto fun_main
+endif_483:
+  Goto fun_main
+else_481:
+  Sense Ahead if_526 else_526 Home
+if_526:
+  Mark 0
+  Move fail_528
+  Goto fun_main
+fail_528:
+  Flip 2 rand_yes_530 rand_no_530
+rand_yes_530:
+  Flip 2 rand_yes_532 rand_no_532
+rand_yes_532:
+  Turn Left
+  Goto fun_main
+rand_no_532:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_532:
+  Goto fun_main
+rand_no_530:
+  Flip 2 rand_yes_534 rand_no_534
+rand_yes_534:
+  Turn Right
+  Goto fun_main
+rand_no_534:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_534:
+  Goto fun_main
+end_of_rand_530:
+  Goto fun_main
+success_528:
+  Goto fun_main
+else_526:
+  Sense Ahead if_535 else_535 Marker 0
+if_535:
+  Sense Ahead if_536 else_536 Marker 1
+if_536:
+  Sense Ahead if_537 else_537 Marker 2
+if_537:
+  Move fail_539
+  Goto fun_main
+fail_539:
+  Flip 2 rand_yes_541 rand_no_541
+rand_yes_541:
+  Flip 2 rand_yes_543 rand_no_543
+rand_yes_543:
+  Turn Left
+  Goto fun_main
+rand_no_543:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_543:
+  Goto fun_main
+rand_no_541:
+  Flip 2 rand_yes_545 rand_no_545
+rand_yes_545:
+  Turn Right
+  Goto fun_main
+rand_no_545:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_545:
+  Goto fun_main
+end_of_rand_541:
+  Goto fun_main
+success_539:
+  Goto fun_main
+else_537:
+  Mark 0
+  Mark 1
+  Mark 2
+  Move fail_547
+  Goto fun_main
+fail_547:
+  Flip 2 rand_yes_549 rand_no_549
+rand_yes_549:
+  Flip 2 rand_yes_551 rand_no_551
+rand_yes_551:
+  Turn Left
+  Goto fun_main
+rand_no_551:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_551:
+  Goto fun_main
+rand_no_549:
+  Flip 2 rand_yes_553 rand_no_553
+rand_yes_553:
+  Turn Right
+  Goto fun_main
+rand_no_553:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_553:
+  Goto fun_main
+end_of_rand_549:
+  Goto fun_main
+success_547:
+  Goto fun_main
+endif_537:
+  Goto fun_main
+else_536:
+  Sense Ahead if_554 else_554 Marker 2
+if_554:
+  Mark 0
+  Mark 1
+  Unmark 2
+  Move fail_556
+  Goto fun_main
+fail_556:
+  Flip 2 rand_yes_558 rand_no_558
+rand_yes_558:
+  Flip 2 rand_yes_560 rand_no_560
+rand_yes_560:
+  Turn Left
+  Goto fun_main
+rand_no_560:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_560:
+  Goto fun_main
+rand_no_558:
+  Flip 2 rand_yes_562 rand_no_562
+rand_yes_562:
+  Turn Right
+  Goto fun_main
+rand_no_562:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_562:
+  Goto fun_main
+end_of_rand_558:
+  Goto fun_main
+success_556:
+  Goto fun_main
+else_554:
+  Mark 0
+  Unmark 1
+  Mark 2
+  Move fail_564
+  Goto fun_main
+fail_564:
+  Flip 2 rand_yes_566 rand_no_566
+rand_yes_566:
+  Flip 2 rand_yes_568 rand_no_568
+rand_yes_568:
+  Turn Left
+  Goto fun_main
+rand_no_568:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_568:
+  Goto fun_main
+rand_no_566:
+  Flip 2 rand_yes_570 rand_no_570
+rand_yes_570:
+  Turn Right
+  Goto fun_main
+rand_no_570:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_570:
+  Goto fun_main
+end_of_rand_566:
+  Goto fun_main
+success_564:
+  Goto fun_main
+endif_554:
+  Goto fun_main
+endif_536:
+  Goto fun_main
+else_535:
+  Move fail_572
+  Goto fun_main
+fail_572:
+  Flip 2 rand_yes_574 rand_no_574
+rand_yes_574:
+  Flip 2 rand_yes_576 rand_no_576
+rand_yes_576:
+  Turn Left
+  Goto fun_main
+rand_no_576:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_576:
+  Goto fun_main
+rand_no_574:
+  Flip 2 rand_yes_578 rand_no_578
+rand_yes_578:
+  Turn Right
+  Goto fun_main
+rand_no_578:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_578:
+  Goto fun_main
+end_of_rand_574:
+  Goto fun_main
+success_572:
+  Goto fun_main
+endif_535:
+  Goto fun_main
+endif_526:
+  Goto fun_main
+endif_481:
+  Goto fun_main
+case_any_478:
+  Move fail_581
+  Goto fun_main
+fail_581:
+  Flip 2 rand_yes_583 rand_no_583
+rand_yes_583:
+  Flip 2 rand_yes_585 rand_no_585
+rand_yes_585:
+  Turn Left
+  Goto fun_main
+rand_no_585:
+  Turn Left
+  Turn Left
+  Goto fun_main
+end_of_rand_585:
+  Goto fun_main
+rand_no_583:
+  Flip 2 rand_yes_587 rand_no_587
+rand_yes_587:
+  Turn Right
+  Goto fun_main
+rand_no_587:
+  Turn Right
+  Turn Right
+  Goto fun_main
+end_of_rand_587:
+  Goto fun_main
+end_of_rand_583:
+  Goto fun_main
+success_581:
+  Goto fun_main
+missed_all_478:
+  Goto fun_main
+endif_475:
+  Goto fun_main
+endif_446:
+  Goto fun_main
+endif_154:
+  Goto fun_main
+missed_all_1:
+  Goto fun_main

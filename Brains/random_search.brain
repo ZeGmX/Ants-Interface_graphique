@@ -1,0 +1,38 @@
+search:
+  Sense Ahead pick_food flip Food
+pick_food:
+  Move search
+  PickUp search
+  Goto go_home
+flip:
+  Flip 3 turn_left or
+turn_left:
+  Turn Left
+  Goto search
+or:
+  Flip 2 turn_right move
+turn_right:
+  Turn Right
+  Goto search
+move:
+  Move flip
+  Goto search
+go_home:
+  Sense Ahead home not_home Home
+home:
+  Move go_home
+  Drop search
+  Goto search
+not_home:
+  Flip 3 not_home_left not_home_or
+not_home_left:
+  Turn Left
+  Goto go_home
+not_home_or:
+  Flip 2 not_home_right not_home_move
+not_home_right:
+  Turn Right
+  Goto go_home
+not_home_move:
+  Move not_home
+  Goto go_home
